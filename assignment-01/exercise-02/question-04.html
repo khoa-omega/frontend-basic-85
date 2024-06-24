@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Exercise 02 - Question 04</title>
+		<style>
+			span {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<form name="register-form" id="register-form">
+			<h1>Register</h1>
+			<p>
+				<i>Please <b>fill in this form</b> to create an account</i>
+			</p>
+
+			<label for="full-name"> Full name <span>*</span> </label>
+			<br />
+			<input
+				type="text"
+				name="full-name"
+				id="full-name"
+				placeholder="Input your full name..."
+				required />
+			<br />
+			<br />
+
+			<label for="user-name"> Username <span>*</span> </label>
+			<br />
+			<input
+				type="text"
+				name="user-name"
+				id="user-name"
+				placeholder="Input your user name..."
+				required />
+			<br />
+			<br />
+
+			<label for="password"> Password <span>*</span> </label>
+			<br />
+			<input
+				type="password"
+				name="password"
+				id="password"
+				placeholder="Input your password..."
+				required />
+			<br />
+			<br />
+
+			<label for="email"> Email <span>*</span> </label>
+			<br />
+			<input
+				type="email"
+				name="email"
+				id="email"
+				placeholder="Input your email..."
+				required />
+			<br />
+			<br />
+
+			<label for="phone"> Telephone number <span>*</span> </label>
+			<br />
+			<input
+				type="text"
+				name="phone"
+				id="phone"
+				placeholder="Input your phone number..."
+				required />
+			<br />
+			<br />
+
+			<label>Input Object:</label>
+			<br />
+			<input type="radio" name="object" id="student" checked required />
+			<label for="student">Student</label>
+			<input type="radio" name="object" id="teacher" required />
+			<label for="teacher">Teacher</label>
+			<br />
+			<br />
+
+			<label>Favorite:</label>
+			<br />
+			<input type="checkbox" name="favorite" id="badminton" />
+			<label for="badminton">Badminton</label>
+			<input type="checkbox" name="favorite" id="volleyball" />
+			<label for="volleyball">Volleyball</label>
+			<input type="checkbox" name="favorite" id="football" />
+			<label for="football">Football</label>
+			<br />
+			<br />
+
+			<label for="address"> Address <span>*</span> </label>
+			<br />
+			<select name="address" id="address" required>
+				<option value="0" selected>Bắc Giang</option>
+				<option value="1">Bắc Ninh</option>
+				<option value="2">Cà Mau</option>
+			</select>
+			<br />
+			<br />
+
+			<label for="birthday"> Birthday <span>*</span> </label>
+			<br />
+			<input type="date" name="birthday" id="birthday" required />
+			<br />
+			<br />
+
+			<label for="picture"> Your picture <span>*</span> </label>
+			<br />
+			<input type="file" name="picture" id="picture" accept="image/*" required />
+			<br />
+			<br />
+
+			<input type="submit" value="Đăng ký" />
+			<button type="submit">Đăng ký</button>
+		</form>
+	</body>
+</html>

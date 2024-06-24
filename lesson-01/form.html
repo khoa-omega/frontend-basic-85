@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<title>HTML: Các thẻ biểu mẫu</title>
+	</head>
+	<body>
+		<form action="">
+			<fieldset style="background-color: lightsalmon; color: rebeccapurple">
+				<legend>Thông tin cơ bản</legend>
+				<label for="full-name">Họ và tên: <span style="color: red">*</span></label>
+				<br />
+				<input type="text" name="full-name" id="full-name" />
+
+				<br />
+				<label for="description">Mô tả:</label>
+				<br />
+				<textarea name="description" id="description"></textarea>
+			</fieldset>
+
+			<br />
+			<label for="age">Tuổi:</label>
+			<br />
+			<input type="number" name="age" id="age" min="1" max="100" step="5" />
+
+			<br />
+			<label for="volume">Âm lượng:</label>
+			<br />
+			<input type="range" name="volume" id="volume" min="0" max="10" value="4" />
+
+			<br />
+			<label for="email">Email:</label>
+			<br />
+			<input type="email" name="email" id="email" />
+
+			<br />
+			<label for="password">Mật khẩu:</label>
+			<br />
+			<input type="password" name="password" id="password" />
+
+			<br />
+			<label for="birthday">Ngày sinh:</label>
+			<br />
+			<input type="datetime-local" name="birthday" id="birthday" step="1" />
+			<br />
+			<input type="week" name="week" id="week" />
+			<br />
+			<input type="month" name="month" id="month" />
+
+			<br />
+			<label for="gender">Giới tính:</label>
+			<br />
+			<input type="radio" name="gender" id="male" />
+			<label for="male">Nam</label>
+			<input type="radio" name="gender" id="female" checked />
+			<label for="female">Nữ</label>
+
+			<br />
+			<label for="favorite">Sở thích:</label>
+			<br />
+			<input type="checkbox" name="favorite" id="football" checked />
+			<label for="football">Bóng đá</label>
+			<br />
+			<input type="checkbox" name="favorite" id="volleyball" />
+			<label for="volleyball">Bóng chuyền</label>
+
+			<br />
+			<label for="city">Thành phố:</label>
+			<br />
+			<select name="city" id="city">
+				<option value="1">Hà Nội</option>
+				<option value="2" selected>Hà Nam</option>
+				<option value="3">Hà Tĩnh</option>
+			</select>
+
+			<br />
+			<label for="avatar">Ảnh đại diện:</label>
+			<br />
+			<input type="file" name="avatar" id="avatar" />
+
+			<br />
+			<br />
+			<input type="submit" value="Đăng ký" />
+			<input type="reset" value="Đặt lại" />
+		</form>
+	</body>
+</html>
