@@ -1,0 +1,42 @@
+.square {
+	width: 100px;
+	height: 100px;
+}
+
+.green {
+	background-color: green;
+}
+
+.brown {
+	background-color: brown;
+}
+
+#demo {
+	width: 500px;
+	height: 200px;
+	background-color: orange;
+}
+
+.border {
+	background-color: grey;
+	/* border-width: 5px;
+	border-style: solid;
+	border-color: black; */
+	border: 5px dashed black;
+}
+
+.text {
+	font-size: 48px;
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	font-weight: bold;
+	font-style: italic;
+	/* text-align: center; */
+	text-transform: capitalize;
+	/* text-decoration: overline; */
+	text-shadow: -8px -8px 4px rgba(193, 103, 61, 0.6);
+	text-indent: 100px;
+	letter-spacing: 8px;
+	word-spacing: 16px;
+	line-height: 1.6;
+	color: green;
+}

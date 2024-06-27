@@ -1,0 +1,47 @@
+button {
+	padding: 8px 12px;
+	background-color: green;
+	color: white;
+	border: 2px outset green;
+	cursor: pointer;
+	border-radius: 8px;
+	transition: background-color 200ms;
+	box-shadow: 2px 2px 6px gray;
+	animation: button-text 3s infinite;
+}
+
+button:hover {
+	background-color: darkgreen;
+	border-style: inset;
+	border-color: darkgreen;
+}
+
+@keyframes button-text {
+	0% {
+		color: orange;
+	}
+	50% {
+		color: brown;
+	}
+}
+
+p {
+	border: 5px solid blue;
+
+	/* top = right = bottom = left = 50px */
+	margin: 50px;
+	/* top = bottom = 50px, right = left = 100px */
+	margin: 50px 100px;
+	/* top = 50px, right = left = 100px, bottom = 150px */
+	margin: 50px 100px 150px;
+	/* top, right, bottom, left */
+	margin: 50px 100px 150px 200px;
+	margin-top: 200px;
+
+	padding: 20px;
+
+	width: 200px;
+	height: 50px;
+
+	box-sizing: border-box;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<title>CSS: Cơ bản</title>
+		<style>
+			p {
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+			}
+		</style>
+		<link rel="stylesheet" href="./css-basic.css" />
+	</head>
+	<body>
+		<!--
+            Có 3 cách nhúng CSS vào HTML:
+            1. Inline: Viết CSS trong thuộc tính style
+            2. Internal: Viết CSS trong thẻ style
+            3. External: Viết CSS trong file .css
+        -->
+
+		<p style="width: 100px; height: 100px; background-color: red"></p>
+		<p></p>
+
+		<p class="square green"></p>
+		<p class="square brown"></p>
+		<p id="demo"></p>
+
+		<!-- Border -->
+		<p class="border"></p>
+
+		<!-- Text -->
+		<div class="text">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quae maiores enim sed
+			provident libero omnis dicta, aut culpa consectetur, ipsum nostrum. Esse cupiditate,
+			earum vero pariatur eaque expedita provident.
+		</div>
+	</body>
+</html>
