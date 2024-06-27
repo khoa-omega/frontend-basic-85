@@ -10,7 +10,12 @@
 				<legend>Thông tin cơ bản</legend>
 				<label for="full-name">Họ và tên: <span style="color: red">*</span></label>
 				<br />
-				<input type="text" name="full-name" id="full-name" />
+				<input
+					type="text"
+					name="full-name"
+					id="full-name"
+					placeholder="VD: NGUYEN VAN KHOA"
+					autofocus />
 
 				<br />
 				<label for="description">Mô tả:</label>
@@ -21,17 +26,25 @@
 			<br />
 			<label for="age">Tuổi:</label>
 			<br />
-			<input type="number" name="age" id="age" min="1" max="100" step="5" />
+			<input type="number" name="age" id="age" min="1" max="100" step="5" readonly />
 
 			<br />
-			<label for="volume">Âm lượng:</label>
+			<label title="Giải thích" for="volume">Âm lượng:</label>
 			<br />
-			<input type="range" name="volume" id="volume" min="0" max="10" value="4" />
+			<input
+				title="Giải thích"
+				type="range"
+				name="volume"
+				id="volume"
+				min="0"
+				max="10"
+				value="4"
+				disabled />
 
 			<br />
 			<label for="email">Email:</label>
 			<br />
-			<input type="email" name="email" id="email" />
+			<input type="email" name="email" id="email" required />
 
 			<br />
 			<label for="password">Mật khẩu:</label>
