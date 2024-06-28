@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Animated Input</title>
+		<style>
+			.container {
+				font-family: Cambria;
+				position: relative;
+			}
+
+			#username {
+				padding: 8px;
+				border: 2px solid dodgerblue;
+				border-radius: 8px;
+			}
+
+			span {
+				background-color: white;
+				color: gray;
+				padding: 0 4px;
+				position: absolute;
+				top: 50%;
+				left: 10px;
+				translate: 0 -50%;
+				transition: 200ms;
+			}
+
+			#username:hover + span {
+				top: 0;
+				font-size: 0.75em;
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<input type="text" name="username" id="username" />
+			<span>Tài khoản</span>
+		</div>
+	</body>
+</html>

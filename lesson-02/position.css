@@ -1,0 +1,85 @@
+body {
+	height: 2000px;
+}
+
+.container {
+	width: 600px;
+	height: 600px;
+	border: 5px solid brown;
+	position: relative;
+	top: 100px;
+}
+
+.square {
+	width: 100px;
+	height: 100px;
+}
+
+.square1 {
+	background-color: red;
+
+	/* position: static (mặc định) */
+	position: static;
+	/* top, right, bottom, left: chỉ có hiệu lực với non-static */
+	left: 100px;
+}
+
+.square2 {
+	background-color: green;
+
+	/* position: relative */
+	/* Vị trí tương đối so với vị trí ban đầu */
+	position: relative;
+	left: 100px;
+}
+
+.square3 {
+	background-color: blue;
+
+	/* position: absolute */
+	/* Vị trí tuyệt đối so với phần tử cha gần nhất non-static */
+	position: absolute;
+	top: 0;
+	left: 200px;
+}
+
+.square4 {
+	background-color: black;
+
+	/* position: fixed */
+	/* Vị trí cố định so với khung trình duyệt */
+	position: fixed;
+	right: 0;
+	bottom: 0;
+}
+
+.square5 {
+	background-color: orange;
+
+	/* position: sticky */
+	/* sticky = relative + fixed */
+	position: sticky;
+	top: 0;
+}
+
+#loading {
+	width: 64px;
+	height: 64px;
+	border-width: 4px;
+	border-style: solid;
+	border-color: purple transparent;
+	border-radius: 50%;
+	animation: rotate 400ms linear infinite;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+@keyframes rotate {
+	0% {
+		rotate: 0;
+	}
+	100% {
+		rotate: 360deg;
+	}
+}

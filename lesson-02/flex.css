@@ -1,0 +1,39 @@
+.container {
+	border: 5px solid blue;
+	width: 500px;
+	height: 500px;
+
+	/* Dùng cho container */
+	display: flex;
+	/* Thay đổi hướng */
+	flex-direction: row;
+	/* Căn nội dung theo flex-direction */
+	justify-content: center;
+	/* Căn theo trục vuông góc flex-direction */
+	align-items: center;
+	/*  */
+	/* flex-wrap: wrap; */
+	/*  */
+	align-content: center;
+	/*  */
+	column-gap: 8px;
+	row-gap: 8px;
+}
+
+.box {
+	width: 100px;
+	height: 100px;
+}
+
+.box1 {
+	background-color: red;
+	align-self: end;
+}
+
+.box2 {
+	background-color: green;
+}
+
+.box3 {
+	background-color: black;
+}
