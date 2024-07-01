@@ -1,0 +1,9 @@
+.square {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 8px;
+}
+
+.square-red {
+	background-color: red;
+}
