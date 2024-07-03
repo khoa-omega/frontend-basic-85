@@ -9,21 +9,17 @@
 	box-sizing: border-box;
 }
 
-body {
+html {
 	font-family: Agbalumo;
 	font-size: 1.25em;
-	font-weight: 400;
-	line-height: 1.5;
-	color: #212529;
-	background-color: #ffffff;
-	cursor: url(../images/car.png), default;
+	cursor: url(../images/car_cursor.png), default;
 }
 
 header {
 	text-align: center;
 	padding: 16px 0;
-	color: #ffffff;
 	background-color: #2ed573;
+	color: #ffffff;
 }
 
 .container {
@@ -36,11 +32,11 @@ aside {
 }
 
 .menu {
-	position: sticky;
-	top: 16px;
 	display: flex;
 	flex-direction: column;
 	row-gap: 16px;
+	position: sticky;
+	top: 16px;
 }
 
 .vr {
@@ -53,6 +49,23 @@ main {
 	padding: 24px 32px;
 }
 
+.form-control {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-control label::after {
+	content: "*";
+	color: #ff0000;
+}
+
+.form-control input {
+	height: 40px;
+	padding: 0 8px;
+	font-family: inherit;
+	font-size: inherit;
+}
+
 form {
 	display: flex;
 	flex-direction: column;
@@ -60,38 +73,20 @@ form {
 	max-width: 560px;
 }
 
-.form-control {
+.form-submit {
 	display: flex;
-	flex-direction: column;
+	justify-content: space-between;
 }
 
-.form-control label::after {
-	content: " *";
-	color: #ff0000;
-}
-
-.form-control input {
-	height: 40px;
+.form-submit input {
 	font-family: inherit;
 	font-size: inherit;
 	padding: 0 8px;
 }
 
-.form-submit {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.form-submit input {
-	padding: 8px 16px;
-	font-family: inherit;
-	font-size: inherit;
-}
-
 footer {
 	text-align: center;
 	padding: 16px 0;
-	color: #ffffff;
 	background-color: #212529;
+	color: #ffffff;
 }

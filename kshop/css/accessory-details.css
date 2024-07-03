@@ -9,21 +9,17 @@
 	box-sizing: border-box;
 }
 
-body {
+html {
 	font-family: Agbalumo;
 	font-size: 1.25em;
-	font-weight: 400;
-	line-height: 1.5;
-	color: #212529;
-	background-color: #ffffff;
-	cursor: url(../images/car.png), default;
+	cursor: url(../images/car_cursor.png), default;
 }
 
 header {
 	text-align: center;
 	padding: 16px 0;
-	color: #ffffff;
 	background-color: #2ed573;
+	color: #ffffff;
 }
 
 .container {
@@ -36,11 +32,11 @@ aside {
 }
 
 .menu {
-	position: sticky;
-	top: 16px;
 	display: flex;
 	flex-direction: column;
 	row-gap: 16px;
+	position: sticky;
+	top: 16px;
 }
 
 .vr {
@@ -53,6 +49,23 @@ main {
 	padding: 24px 32px;
 }
 
+.form-control {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-control label::after {
+	content: "*";
+	color: #ff0000;
+}
+
+.form-control input {
+	height: 40px;
+	padding: 0 8px;
+	font-family: inherit;
+	font-size: inherit;
+}
+
 form {
 	display: flex;
 	flex-direction: column;
@@ -60,33 +73,15 @@ form {
 	max-width: 560px;
 }
 
-.form-control {
-	display: flex;
-	flex-direction: column;
-}
-
-.form-control label::after {
-	content: " *";
-	color: #ff0000;
-}
-
-.form-control input {
-	height: 40px;
-	font-family: inherit;
-	font-size: inherit;
-	padding: 0 8px;
-}
-
 .form-submit {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 }
 
 .form-submit input {
-	padding: 8px 16px;
 	font-family: inherit;
 	font-size: inherit;
+	padding: 0 8px;
 }
 
 .table-container {
@@ -99,7 +94,6 @@ form {
 table {
 	width: 100%;
 	height: 100%;
-	cursor: url("../images/sword.png"), pointer;
 	border-collapse: collapse;
 }
 
@@ -120,23 +114,19 @@ tbody tr:nth-child(odd) {
 	background-color: #eeeeee;
 }
 
-tbody tr:hover,
-thead th:hover {
+thead th:hover,
+tbody tr:hover {
 	background-color: #dddddd;
 }
 
-td button {
-	padding: 4px 8px;
-	font-size: 16px;
+tbody button {
 	font-family: inherit;
+	font-size: inherit;
+	padding: 4px 8px;
 }
 
-td:last-child {
+tbody td:last-child {
 	text-align: center;
-}
-
-td:nth-child(5) {
-	text-align: right;
 }
 
 .data {
@@ -146,10 +136,10 @@ td:nth-child(5) {
 #loading {
 	position: absolute;
 	top: 0;
+	left: 0;
 	right: 0;
 	bottom: 0;
-	left: 0;
-	background-color: #ddd;
+	background-color: #dddddd;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -160,16 +150,16 @@ td:nth-child(5) {
 	height: 32px;
 	border-width: 4px;
 	border-style: solid;
-	border-color: #d87093 transparent;
+	border-color: salmon transparent;
 	border-radius: 50%;
 	animation: rotate 400ms linear infinite;
 }
 
 @keyframes rotate {
-	0% {
+	from {
 		rotate: 0deg;
 	}
-	100% {
+	to {
 		rotate: 360deg;
 	}
 }
@@ -177,6 +167,6 @@ td:nth-child(5) {
 footer {
 	text-align: center;
 	padding: 16px 0;
-	color: #ffffff;
 	background-color: #212529;
+	color: #ffffff;
 }

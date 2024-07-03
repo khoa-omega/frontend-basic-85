@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>KShop: Accessory details</title>
-		<link type="image/png" sizes="32x32" rel="icon" href="../images/car-32.png" />
+		<link type="image/png" rel="icon" href="../images/car_64x64.png" />
 		<link rel="stylesheet" href="../css/accessory-details.css" />
 	</head>
 	<body>
@@ -14,8 +15,8 @@
 			<aside>
 				<div class="menu">
 					<p><b>MENU:</b></p>
-					<p><a href="./add-new-car.html">Add a new car</a></p>
-					<p><a href="./car-management.html">Cars management</a></p>
+					<p><a href="./add-new-car.html">Add new car</a></p>
+					<p><a href="./cars-management.html">Cars management</a></p>
 				</div>
 			</aside>
 			<div class="vr"></div>
@@ -23,11 +24,11 @@
 				<form id="accessory-form">
 					<p><b>ACCESSORY DETAILS:</b></p>
 					<div class="form-control">
-						<label for="id">ID</label>
-						<input type="text" name="id" id="id" placeholder="1" required disabled />
+						<label for="id">ID </label>
+						<input type="number" name="id" id="id" placeholder="1" required />
 					</div>
 					<div class="form-control">
-						<label for="license-plate">License plate</label>
+						<label for="license-plate">License plate </label>
 						<input
 							type="text"
 							name="license-plate"
@@ -62,7 +63,7 @@
 							required />
 					</div>
 					<div class="form-control">
-						<label for="repair-status">Repair status</label>
+						<label for="repair-status">Repair status </label>
 						<input
 							type="text"
 							name="repair-status"
@@ -82,17 +83,17 @@
 						<table>
 							<thead>
 								<tr>
-									<th>Id</th>
+									<th>ID</th>
 									<th>License plate</th>
 									<th>Repair date</th>
 									<th>Name</th>
 									<th>Price</th>
 									<th>Status damaged</th>
 									<th>Repair status</th>
-									<th>Actions</th>
+									<th>Action</th>
 								</tr>
 							</thead>
-							<tbody id="accessories"></tbody>
+							<tbody></tbody>
 						</table>
 					</div>
 					<div id="loading">
@@ -101,7 +102,9 @@
 				</div>
 			</main>
 		</div>
-		<footer><i>BASED ON SPRING FRAMEWORK</i></footer>
+		<footer>
+			<i>BASED ON SPRING FRAMEWORK</i>
+		</footer>
 		<script src="../js/accessory-details.js"></script>
 	</body>
 </html>

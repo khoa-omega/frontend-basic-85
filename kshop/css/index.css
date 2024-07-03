@@ -9,21 +9,17 @@
 	box-sizing: border-box;
 }
 
-body {
+html {
 	font-family: Agbalumo;
 	font-size: 1.25em;
-	font-weight: 400;
-	line-height: 1.5;
-	color: #212529;
-	background-color: #ffffff;
-	cursor: url(../images/car.png), default;
+	cursor: url(../images/car_cursor.png), default;
 }
 
 header {
 	text-align: center;
 	padding: 16px 0;
-	color: #ffffff;
 	background-color: #2ed573;
+	color: #ffffff;
 }
 
 .container {
@@ -36,11 +32,11 @@ aside {
 }
 
 .menu {
-	position: sticky;
-	top: 16px;
 	display: flex;
 	flex-direction: column;
 	row-gap: 16px;
+	position: sticky;
+	top: 16px;
 }
 
 .vr {
@@ -58,6 +54,6 @@ main {
 footer {
 	text-align: center;
 	padding: 16px 0;
-	color: #ffffff;
 	background-color: #212529;
+	color: #ffffff;
 }
