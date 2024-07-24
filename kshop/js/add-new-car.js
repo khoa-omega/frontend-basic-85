@@ -1,0 +1,32 @@
+const formLicensePlate = document.getElementById("license-plate");
+const formRepairDate = document.getElementById("repair-date");
+const formCustomerName = document.getElementById("customer-name");
+const formCatalog = document.getElementById("catalog");
+const formCarMaker = document.getElementById("car-maker");
+const form = document.getElementById("car-create-form");
+
+const BASE_URL = "https://651173b9829fa0248e40178d.mockapi.io";
+
+form.addEventListener("submit", function (event) {
+	event.preventDefault();
+	create();
+	this.reset();
+});
+
+async function create() {
+	const response = await fetch(`${BASE_URL}/api/v1/cars`, {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json"
+		},
+		body: JSON.stringify({
+			licensePlate: formLicensePlate.value,
+			repairDate: formRepairDate.value,
+			customerName: formCustomerName.value,
+			catalog: formCatalog.value,
+			carMaker: formCarMaker.value
+		})
+	});
+	const car = await response.json();
+	alert(car);
+}

@@ -24,6 +24,10 @@
 				<form id="car-update-form">
 					<p><b>CAR DETAILS:</b></p>
 					<div class="form-control">
+						<label for="id">ID</label>
+						<input type="text" name="id" id="id" placeholder="1" required />
+					</div>
+					<div class="form-control">
 						<label for="license-plate">License plate</label>
 						<input
 							type="text"
@@ -50,7 +54,7 @@
 						<input
 							type="text"
 							name="catalog"
-							id="catelog"
+							id="catalog"
 							placeholder="Bảo dưỡng định kỳ lần 1"
 							required />
 					</div>
@@ -84,63 +88,7 @@
 									<th>Action</th>
 								</tr>
 							</thead>
-							<tbody>
-								<tr>
-									<td>30H-666.66</td>
-									<td>2024-07-02</td>
-									<td>Nguyễn Văn Khoa</td>
-									<td>Bảo dưỡng định kỳ</td>
-									<td>Honda</td>
-									<td>
-										<button>🖊</button>
-										<button>❌</button>
-									</td>
-								</tr>
-								<tr>
-									<td>30H-666.66</td>
-									<td>2024-07-02</td>
-									<td>Nguyễn Văn Khoa</td>
-									<td>Bảo dưỡng định kỳ</td>
-									<td>Honda</td>
-									<td>
-										<button>🖊</button>
-										<button>❌</button>
-									</td>
-								</tr>
-								<tr>
-									<td>30H-666.66</td>
-									<td>2024-07-02</td>
-									<td>Nguyễn Văn Khoa</td>
-									<td>Bảo dưỡng định kỳ</td>
-									<td>Honda</td>
-									<td>
-										<button>🖊</button>
-										<button>❌</button>
-									</td>
-								</tr>
-								<tr>
-									<td>30H-666.66</td>
-									<td>2024-07-02</td>
-									<td>Nguyễn Văn Khoa</td>
-									<td>Bảo dưỡng định kỳ</td>
-									<td>Honda</td>
-									<td>
-										<button>🖊</button>
-										<button>❌</button>
-									</td>
-								</tr>
-								<tr>
-									<td>30H-666.66</td>
-									<td>2024-07-02</td>
-									<td>Nguyễn Văn Khoa</td>
-									<td>Bảo dưỡng định kỳ</td>
-									<td>Honda</td>
-									<td>
-										<button>🖊</button>
-										<button>❌</button>
-									</td>
-								</tr>
-							</tbody>
+							<tbody id="cars"></tbody>
 						</table>
 					</div>
 					<div id="loading">
@@ -152,6 +100,10 @@
 		<footer>
 			<i>BASED ON SPRING FRAMEWORK</i>
 		</footer>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"></script>
 		<script src="../js/cars-management.js"></script>
 	</body>
 </html>
