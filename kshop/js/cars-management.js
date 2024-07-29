@@ -8,7 +8,7 @@ const formCarMaker = document.getElementById("car-maker");
 const form = document.getElementById("car-update-form");
 const tbody = document.getElementById("cars");
 
-const BASE_URL = "https://651173b9829fa0248e40178d.mockapi.io";
+const BASE_URL = "http://localhost:8080";
 
 form.onsubmit = async function (event) {
 	event.preventDefault();

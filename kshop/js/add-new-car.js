@@ -5,7 +5,7 @@ const formCatalog = document.getElementById("catalog");
 const formCarMaker = document.getElementById("car-maker");
 const form = document.getElementById("car-create-form");
 
-const BASE_URL = "https://651173b9829fa0248e40178d.mockapi.io";
+const BASE_URL = "http://localhost:8080";
 
 form.addEventListener("submit", function (event) {
 	event.preventDefault();
