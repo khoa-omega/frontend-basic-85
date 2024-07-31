@@ -164,6 +164,33 @@ tbody td:last-child {
 	}
 }
 
+.pagination {
+	display: flex;
+	justify-content: end;
+	gap: 24px;
+	margin-top: 8px;
+}
+
+.pagination-size > select {
+	padding: 0 8px;
+	font-size: inherit;
+	font-family: inherit;
+	cursor: url(../images/car_cursor.png), pointer;
+}
+
+.pagination-controls {
+	display: flex;
+
+	> input {
+		width: 56px;
+		text-align: center;
+	}
+
+	> button {
+		width: 48px;
+	}
+}
+
 footer {
 	text-align: center;
 	padding: 16px 0;

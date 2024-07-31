@@ -25,7 +25,7 @@
 					<p><b>CAR DETAILS:</b></p>
 					<div class="form-control">
 						<label for="id">ID</label>
-						<input type="text" name="id" id="id" placeholder="1" required />
+						<input type="text" name="id" id="id" placeholder="1" required disabled />
 					</div>
 					<div class="form-control">
 						<label for="license-plate">License plate</label>
@@ -93,6 +93,37 @@
 					</div>
 					<div id="loading">
 						<div class="loading-icon"></div>
+					</div>
+					<div class="pagination">
+						<span class="pagination-size">
+							<select title="Số bản ghi mỗi trang" id="size">
+								<option value="3" selected>3</option>
+								<option value="6">6</option>
+								<option value="9">9</option>
+							</select>
+							<span>Record(s) per page.</span>
+						</span>
+						<span class="pagination-controls">
+							<button title="Trang đầu tiên" type="button" id="first-page">
+								<i class="fa-solid fa-angles-left"></i>
+							</button>
+							<button title="Trang trước" type="button" id="prev-page">
+								<i class="fa-solid fa-angle-left"></i>
+							</button>
+							<input
+								title="Trang hiện tại"
+								type="number"
+								name="page"
+								id="page"
+								value="1"
+								placeholder="1" />
+							<button title="Trang sau" type="button" id="next-page">
+								<i class="fa-solid fa-angle-right"></i>
+							</button>
+							<button title="Trang cuối cùng" type="button" id="last-page">
+								<i class="fa-solid fa-angles-right"></i>
+							</button>
+						</span>
 					</div>
 				</div>
 			</main>

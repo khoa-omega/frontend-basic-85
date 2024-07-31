@@ -12,7 +12,7 @@ const BASE_URL = "http://localhost:8080";
 
 form.addEventListener("submit", async function (event) {
 	event.preventDefault();
-	await create();
+	await createOrUpdate();
 	this.reset();
 	findAll();
 });
@@ -48,20 +48,33 @@ function showAccessories(accessories) {
 		const editButton = document.createElement("button");
 		editButton.textContent = "🖊";
 		editButton.onclick = function () {
-			// logic update
+			formId.value = accessory.id;
+			formLicensePlate.value = accessory.licensePlate;
+			formRepairDate.value = accessory.repairDate;
+			formName.value = accessory.name;
+			formPrice.value = accessory.price;
+			formStatusDamaged.value = accessory.statusDamaged;
+			formRepairStatus.value = accessory.repairStatus;
 		};
 		const deleteButton = document.createElement("button");
 		deleteButton.textContent = "❌";
 		deleteButton.onclick = async function () {
-			// logic xóa
+			const confirmed = confirm("Do you want to delete this accessory?");
+			if (confirmed) {
+				await deleteById(accessory.id);
+				tbody.removeChild(row);
+			}
 		};
 		row.insertCell().append(editButton, deleteButton);
 	}
 }
 
-async function create() {
-	const response = await fetch(`${BASE_URL}/api/v1/accessories`, {
-		method: "POST",
+async function createOrUpdate() {
+	const id = formId.value;
+	const method = id ? "PUT" : "POST";
+	const url = id ? `${BASE_URL}/api/v1/accessories/${id}` : `${BASE_URL}/api/v1/accessories`;
+	const response = await fetch(url, {
+		method: method,
 		headers: {
 			"Content-Type": "application/json"
 		},
@@ -74,6 +87,13 @@ async function create() {
 			repairDate: formRepairDate.value
 		})
 	});
-	const accessory = await response.json();
-	alert("Tạo accessory thành công: " + accessory.name);
+}
+
+async function deleteById(id) {
+	const response = await fetch(`${BASE_URL}/api/v1/accessories/${id}`, {
+		method: "DELETE",
+		headers: {
+			"Content-Type": "application/json"
+		}
+	});
 }

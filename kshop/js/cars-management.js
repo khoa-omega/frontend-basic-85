@@ -21,14 +21,20 @@ findAll();
 
 async function findAll() {
 	loading.style.display = "flex";
-	const response = await fetch(`${BASE_URL}/api/v1/cars`, {
+	const url = new URL(`${BASE_URL}/api/v1/cars`);
+	url.search = new URLSearchParams({
+		page: document.getElementById("page").value,
+		size: document.getElementById("size").value
+	}).toString();
+	const response = await fetch(url, {
 		method: "GET",
 		headers: {
 			"Content-Type": "application/json"
 		}
 	});
 	const body = await response.json();
-	showCars(body);
+	showCars(body.content);
+	updatePagination(body.number + 1);
 	loading.style.display = "none";
 }
 
@@ -91,4 +97,24 @@ async function deleteById(id) {
 			"Content-Type": "application/json"
 		}
 	});
+}
+
+function updatePagination(page) {
+	const pageInput = document.getElementById("page");
+	pageInput.value = page;
+
+	const goToPage = page => {
+		pageInput.value = page;
+		findAll();
+	};
+
+	const prevPageButton = document.getElementById("prev-page");
+	prevPageButton.onclick = function () {
+		goToPage(page - 1);
+	};
+
+	const nextPageButton = document.getElementById("next-page");
+	nextPageButton.onclick = function () {
+		goToPage(page + 1);
+	};
 }

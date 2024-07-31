@@ -28,5 +28,5 @@ async function create() {
 		})
 	});
 	const car = await response.json();
-	alert(car);
+	alert("Tạo thành công car: " + car.licensePlate);
 }
